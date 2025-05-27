@@ -16,9 +16,11 @@ const getWord = async function() {
 
   const data = await response.text();
   const wordArray = words.split("\n");
+  console.log(data);
+  getWord();
 }
 
-getWord();
+
 
 
 // Display our symbols as placeholders for the chosen word's letters
@@ -75,6 +77,7 @@ const makeGuess = function (guess) {
     console.log(guessedLetters);
     showGuessedLetters();
     updateWordInProgress(guessedLetters);
+    updateGuessesRemaining();
   }
 };
 
