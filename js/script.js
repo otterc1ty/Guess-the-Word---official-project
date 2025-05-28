@@ -7,7 +7,7 @@ const remainingGuessesSpan = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const playAgainButton = document.querySelector(".play-again");
 
-const word = "magnolia";
+let word = "magnolia";  //<-- was originally a const variable, but in order for the game to fetch other words, it has to be a 'let' variable
 const guessedLetters = [];
 let remainingGuesses = 8;
 
